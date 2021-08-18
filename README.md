@@ -8,14 +8,15 @@
 
 ## chrome的版本設定與下載
 
-1. 先到下方網址確認你的chrome版本
-chrome://settings/help
+ 1. 先到下方網址確認你的chrome版本
+    chrome://settings/help
 
-2. 到下方網址下載對應版本的driver: http://chromedriver.storage.googleapis.com/index.html
+ 2. 到下方網址下載對應版本的driver
+    http://chromedriver.storage.googleapis.com/index.html
 
     例如我的chrome版本為 92.0.4515.159，則driver的部分可以下載 92.0.4515.xxxx 的版本，其中 xxxx 為最新版。
-
-3. 將下載的 chromedriver_win32.zip 解壓縮後放到 crawler-xrayhead 資料夾底下
+    
+ 3. 將下載的 chromedriver_win32.zip 解壓縮後放到 crawler-xrayhead 資料夾底下
 
 ## NodeJs下載與測試
 
@@ -29,6 +30,6 @@ chrome://settings/help
  2. clone專案
  3. 確認chrome-driver的版本
  4. 打開crawler-xrayhead資料夾，並複製資料夾路徑
- 5. 打開cmd，貼上「cd /d {資料夾路徑}」並執行(這裡的{}不用打出來，{}只是代表要在這個地方填入這個參數)
- 6. 打開cmd，輸入「npm install」，這個動作是下載要執行程式的所需套件
- 7. 打開cmd，輸入「node .\index.js」，就可以開始執行爬蟲工具了
+ 5. 在cmd內輸入「cd /d {資料夾路徑}」並執行(這裡的{}不用打出來，{}只是代表要在這個地方填入這個參數)
+ 6. 在cmd內輸入「npm install」，這個動作是下載要執行程式的所需套件
+ 7. 在cmd內輸入「node .\index.js」，就可以開始執行爬蟲工具了
