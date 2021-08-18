@@ -4,18 +4,16 @@
 
 這是一個擷取STANFORD提供的公開醫學資料的簡易爬蟲工具，主要解決的問題是同時擷取圖片以及由HTML渲染的資訊，並擷取成.PNG圖片檔。
 
-此工具使用Selenium操作ChromeDriver，其中目前在專案中的ChromeDriver版本為 92.0.4515.159，請先參考下方「chrome的版本設定與下載」，以確保Driver與自己環境的Chrome版本相同。
+此工具使用Selenium操作ChromeDriver，其中目前在專案中的ChromeDriver版本為 92.0.4515.107，請先參考下方「chrome的版本設定與下載」，以確保Driver與自己環境的Chrome版本相同。
 
 ## chrome的版本設定與下載
 
 1. 先到下方網址確認你的chrome版本
 chrome://settings/help
 
-2. 到下方網址下載對應版本的driver
-http://chromedriver.storage.googleapis.com/index.html
+2. 到下方網址下載對應版本的driver: http://chromedriver.storage.googleapis.com/index.html
 
-例如我的chrome版本為 92.0.4515.159，則driver的部分可以下載 92.0.4515.xxxx 的版本
-其中 xxxx 為最新版。
+    例如我的chrome版本為 92.0.4515.159，則driver的部分可以下載 92.0.4515.xxxx 的版本，其中 xxxx 為最新版。
 
 3. 將下載的 chromedriver_win32.zip 解壓縮後放到 crawler-xrayhead 資料夾底下
 
