@@ -64,13 +64,21 @@ const getTargetUrlAndProjectName = async () => {
 const getIntoTargetAndSaveScreenhot = async (_target) => {
     await setDriverURL(_target.link);
     await waitInSeconds(10);
+    let _mes = ['sag', 'cor', 'ax'];
+    for (_me of _mes) {
+        await changeme(_me);
+        await processAutoWheelAndScreenshotFromFirstToLast(_target, _me);
+    }
+}
+
+const processAutoWheelAndScreenshotFromFirstToLast = async (_target, _me) => {
     await scrollWheelToTop();
     let _preImgPath = undefined;
     let _nowImgPath = await getNowImageSrcPath();
     let _index = 0;
     while (_preImgPath != _nowImgPath) {
-        await takeScreenshot(driver, 'output/' + _target.name, `/${++_index}.png`)
-        console.log('file path: ' + `output/${_target.name}/${_index}.png`)
+        await takeScreenshot(driver, `output/${_target.name}/${_me}`, `/${++_index}.png`);
+        console.log('file path: ' + `output/${_target.name}/${_me}/${_index}.png`);
         await scrollDown();
         await waitInSeconds(0.5);
         _preImgPath = _nowImgPath;
@@ -108,6 +116,11 @@ const scrollDown = async () => {
 const wheel = async (_detail) => {
     await driver.executeScript('wheel({detail: ' + _detail + '})');
     await waitInSeconds(1);
+}
+
+const changeme = async (_me) => {
+    await driver.executeScript('changeme(\''+ _me + '\')');
+    await waitInSeconds(2);
 }
 
 const takeScreenshot = async (_driver, _folder, _filename) => {
